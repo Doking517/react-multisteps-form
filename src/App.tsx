@@ -49,7 +49,7 @@ function App() {
 		});
 	}
 	const stepName = ['Your Profile', 'Business Information', 'Additional Users'];
-	const { steps, currentStepIndex, step, isFirstStep, back, next, isLastStep } =
+	const { currentStepIndex, step, isFirstStep, back, next, isLastStep } =
 		useMultistepForm([
 			<YourProfile
 				{...data}
@@ -74,8 +74,10 @@ function App() {
 					className="w-[70%]"
 					onSubmit={onsubmit}
 				>
-					<div className="absolute top-2 right-2">
-						{stepName[currentStepIndex]}/{steps.length}
+					<div className="absolute top-2 right-2 shadow-2xl  bg-gradient-to-r from-sky-500 to-indigo-500 p-4 rounded-xl">
+						<span className="text-slate-700 font-bold">
+							{stepName[currentStepIndex]}
+						</span>
 					</div>
 
 					{step}
