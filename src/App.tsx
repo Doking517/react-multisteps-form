@@ -63,7 +63,8 @@ function App() {
 
 	function onsubmit(e: FormEvent) {
 		e.preventDefault();
-		next();
+		if (!isLastStep) return next();
+		console.log(data);
 	}
 
 	return (
@@ -120,7 +121,6 @@ function App() {
 							)}
 							<button
 								type="submit"
-								onClick={() => console.log(INITIAL_DATA)}
 								className=" mt-5 shadow-2xl  bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-4 py-2 rounded-md"
 							>
 								{isLastStep ? 'finish' : `Next Step`}
