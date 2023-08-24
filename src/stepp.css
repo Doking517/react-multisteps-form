@@ -1,0 +1,16 @@
+.step-item {
+	@apply relative flex flex-col justify-center items-center;
+}
+/* .step-item:not(:first-child):before {
+	@apply content-[''] bg-slate-300 absolute w-full h-[5px] right-2/4 top-1/2 -translate-y-2/4;
+} */
+.step {
+	@apply w-7 h-7 flex z-10 relative bg-slate-100 rounded-full items-center justify-center;
+}
+
+.active {
+	@apply bg-gradient-to-r from-cyan-500 to-blue-500 w-auto rounded-r-full h-full p-6;
+}
+.completed {
+	@apply bg-gradient-to-r from-cyan-500 to-green-400 w-auto h-full rounded-r-full p-6;
+}
